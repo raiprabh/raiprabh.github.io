@@ -464,5 +464,5 @@ footer .footer-below {
 }
 @keyframes animatedBackground {
     from { background-position: 0 0; }
-    to { background-position: 100% 100%; }
+    to { background-position: 100% 0; }
 }
