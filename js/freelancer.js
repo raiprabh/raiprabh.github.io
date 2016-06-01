@@ -35,3 +35,6 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+var windowHeight = $(window).height()
+$('header').height(windowHeight)
+$('.header-layer').css('height',windowHeight+'px')
