@@ -38,3 +38,6 @@ $('.navbar-collapse ul li a').click(function() {
 var windowHeight = $(window).height()
 $('header').height(windowHeight)
 $('.header-layer').css('height',windowHeight+'px')
+$(document).ready(
+    console.log('document fully loaded')
+)
