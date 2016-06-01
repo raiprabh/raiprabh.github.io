@@ -22,7 +22,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #2196F3;
 }
 
 h1,
@@ -93,6 +93,11 @@ header {
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
+}
+
+.header-layer {
+    background-color: rgba(25, 25, 25, 0.5);
+    width: 100%;
 }
 
 header img {
@@ -186,7 +191,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #001A96;
+    background: #3F51B5;
 }
 
 section.success a,
