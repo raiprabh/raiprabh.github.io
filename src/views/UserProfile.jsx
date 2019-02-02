@@ -15,7 +15,38 @@ import {
   Col
 } from 'reactstrap';
 
+const URLS = {
+  facebook: {
+    url: 'https://www.facebook.com/raiprabhjot',
+    event: 'facebook-url'
+  },
+  twitter: {
+    url: 'https://twitter.com/rai_prabh',
+    event: 'twitter-url'
+  },
+  linkedin: {
+    url: 'https://www.linkedin.com/in/prabhjotrai/',
+    event: 'linkedin-url'
+  },
+  github: {
+    url: 'https://www.github.com/raiprabh',
+    event: 'github-url'
+  }
+}
+
 class UserProfile extends React.Component {
+
+  onButtonClick = type => {
+    const eventObject = URLS[type];
+    window.open(eventObject.url);
+    if (analytics) {
+      analytics.track('Profile Button Clicked', {
+        type,
+        event
+      })
+    }
+  }
+
   render() {
     return (
       <>
@@ -59,7 +90,7 @@ class UserProfile extends React.Component {
                       className="btn-icon btn-round"
                       color="facebook"
                       onClick={() => {
-                        window.open('https://www.facebook.com/raiprabhjot');
+                        this.onButtonClick('facebook')
                       }}
                     >
                       <i className="fab fa-facebook" />
@@ -67,27 +98,21 @@ class UserProfile extends React.Component {
                     <Button
                       className="btn-icon btn-round"
                       color="twitter"
-                      onClick={() => {
-                        window.open('https://twitter.com/rai_prabh');
-                      }}
+                      onClick={() => this.onButtonClick('twitter')}
                     >
                       <i className="fab fa-twitter" />
                     </Button>
                     <Button
                       className="btn-icon btn-round"
                       color="google"
-                      onClick={() => {
-                        window.open('https://www.linkedin.com/in/prabhjotrai/');
-                      }}
+                      onClick={() => this.onButtonClick('linkedin')}
                     >
                       <i className="fab fa-linkedin" />
                     </Button>
                     <Button
                       className="btn-icon btn-round"
                       color="google"
-                      onClick={() => {
-                        window.open('https://www.github.com/raiprabh');
-                      }}
+                      onClick={() => this.onButtonClick('github')}
                     >
                       <i className="fab fa-github" />
                     </Button>
