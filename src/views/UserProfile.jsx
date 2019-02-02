@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 import {
@@ -13,7 +13,7 @@ import {
   Input,
   Row,
   Col
-} from "reactstrap";
+} from 'reactstrap';
 
 class UserProfile extends React.Component {
   render() {
@@ -34,34 +34,62 @@ class UserProfile extends React.Component {
                       <img
                         alt="..."
                         className="avatar"
-                        src={require("assets/img/headshot.jpg")}
+                        src={require('assets/img/headshot.jpg')}
                       />
                       <h5 className="title">Prabhjot Singh Rai</h5>
                     </a>
-                    <p className="description">Principal Software Engineer at <a href={'https://www.flyhomes.com'} target={'blank'}>Flyhomes</a></p>
+                    <p className="description">
+                      Principal Engineer at{' '}
+                      <a href={'https://www.flyhomes.com'} target={'blank'}>
+                        Flyhomes
+                      </a>
+                    </p>
                   </div>
                   <div className="card-description">
                     <center>
-                      A full-stack engineer with in-depth knowledge of front-end, back-end and devops. Passionate about AI, robots, entrepreneurship and development.
+                      A full-stack engineer with in-depth knowledge of
+                      front-end, back-end and devops. Passionate about AI,
+                      robots, entrepreneurship and development.
                     </center>
                   </div>
                 </CardBody>
                 <CardFooter>
                   <div className="button-container">
-                    <Button className="btn-icon btn-round" color="facebook" onClick={() => {
-                      window.open('https://www.facebook.com/raiprabhjot')
-                    }}>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="facebook"
+                      onClick={() => {
+                        window.open('https://www.facebook.com/raiprabhjot');
+                      }}
+                    >
                       <i className="fab fa-facebook" />
                     </Button>
-                    <Button className="btn-icon btn-round" color="twitter" onClick={() => {
-                      window.open('https://twitter.com/rai_prabh')
-                    }}>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="twitter"
+                      onClick={() => {
+                        window.open('https://twitter.com/rai_prabh');
+                      }}
+                    >
                       <i className="fab fa-twitter" />
                     </Button>
-                    <Button className="btn-icon btn-round" color="google" onClick={() => {
-                      window.open('https://www.linkedin.com/in/prabhjotrai/')
-                    }}>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="google"
+                      onClick={() => {
+                        window.open('https://www.linkedin.com/in/prabhjotrai/');
+                      }}
+                    >
                       <i className="fab fa-linkedin" />
+                    </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="google"
+                      onClick={() => {
+                        window.open('https://www.github.com/raiprabh');
+                      }}
+                    >
+                      <i className="fab fa-github" />
                     </Button>
                   </div>
                 </CardFooter>
