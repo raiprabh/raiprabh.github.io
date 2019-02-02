@@ -1,4 +1,5 @@
 import React from 'react';
+import capitalize from 'lodash/capitalize';
 
 // reactstrap components
 import {
@@ -31,6 +32,10 @@ const URLS = {
   github: {
     url: 'https://www.github.com/raiprabh',
     event: 'github-url'
+  },
+  githubText: {
+    url: 'https://www.github.com/raiprabh',
+    event: 'github-text-url'
   }
 };
 
@@ -39,7 +44,7 @@ class UserProfile extends React.Component {
     const eventObject = URLS[type];
     window.open(eventObject.url);
     if (window.analytics) {
-      window.analytics.track('Profile Button Clicked', {
+      window.analytics.track(`${capitalize(type)} Clicked`, {
         type,
         event: eventObject.event
       });
@@ -87,7 +92,10 @@ class UserProfile extends React.Component {
                       front-end, back-end and devops. Passionate about AI,
                       robots, entrepreneurship and development. <br /> View my
                       github projects{' '}
-                      <a onClick={() => this.onButtonClick('github')} href={''}>
+                      <a
+                        onClick={() => this.onButtonClick('githubText')}
+                        href={''}
+                      >
                         here
                       </a>
                       .
