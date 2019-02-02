@@ -46,6 +46,12 @@ class UserProfile extends React.Component {
     }
   };
 
+  componentDidMount() {
+    if (window.analytics) {
+      window.analytics.page('Home');
+    }
+  }
+
   render() {
     return (
       <>
@@ -79,7 +85,12 @@ class UserProfile extends React.Component {
                     <center>
                       A full-stack engineer with in-depth knowledge of
                       front-end, back-end and devops. Passionate about AI,
-                      robots, entrepreneurship and development.
+                      robots, entrepreneurship and development. <br /> View my
+                      github projects{' '}
+                      <a onClick={() => this.onButtonClick('github')} href={''}>
+                        here
+                      </a>
+                      .
                     </center>
                   </div>
                 </CardBody>
