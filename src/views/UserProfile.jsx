@@ -32,20 +32,19 @@ const URLS = {
     url: 'https://www.github.com/raiprabh',
     event: 'github-url'
   }
-}
+};
 
 class UserProfile extends React.Component {
-
   onButtonClick = type => {
     const eventObject = URLS[type];
     window.open(eventObject.url);
-    if (analytics) {
-      analytics.track('Profile Button Clicked', {
+    if (window.analytics) {
+      window.analytics.track('Profile Button Clicked', {
         type,
-        event
-      })
+        event: eventObject.event
+      });
     }
-  }
+  };
 
   render() {
     return (
@@ -90,7 +89,7 @@ class UserProfile extends React.Component {
                       className="btn-icon btn-round"
                       color="facebook"
                       onClick={() => {
-                        this.onButtonClick('facebook')
+                        this.onButtonClick('facebook');
                       }}
                     >
                       <i className="fab fa-facebook" />
