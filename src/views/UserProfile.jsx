@@ -88,13 +88,10 @@ class UserProfile extends React.Component {
                       <h1 className="title">Prabhjot Singh Rai</h1>
                     </a>
                     <p className="description">
-                      CS Graduate Student at University of Minnesota
+                      CS Grad Student at University of Minnesota
                     </p>
                     <p className="description">
-                      Former Principal Engineer at{' '}
-                      <a href={'https://www.flyhomes.com'} target={'blank'}>
-                        Flyhomes
-                      </a>
+                      Experienced in Fintech and Real Estate Industries
                     </p>
                   </div>
                   <div className="card-description">
