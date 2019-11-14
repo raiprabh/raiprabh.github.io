@@ -69,8 +69,8 @@ class UserProfile extends React.Component {
     return (
       <>
         <div className="content">
-          <Row>
-            <Col md="12" className="full-vertical-height overflow-hidden">
+          <Row className="no-margin-no-padding">
+            <Col md="12" className="no-margin-no-padding full-vertical-height overflow-hidden">
               <Card className="card-user full-height">
                 <CardBody>
                   <CardText />
