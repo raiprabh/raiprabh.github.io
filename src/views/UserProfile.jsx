@@ -33,9 +33,17 @@ const URLS = {
     url: 'https://www.github.com/raiprabh',
     event: 'github-url'
   },
-  githubText: {
-    url: 'https://www.github.com/raiprabh',
-    event: 'github-text-url'
+  resume: {
+    url: 'https://www.prabhjotrai.com/Resume_Rai_Prabhjot_Singh.pdf',
+    event: 'resume-url'
+  },
+  'stack-overflow': {
+    url: 'https://stackoverflow.com/users/5159284/psr',
+    event: 'stack-overflow-url'
+  },
+  instagram: {
+    url: 'https://www.instagram.com/raiprabh',
+    event: 'instagram-url'
   }
 };
 
@@ -77,10 +85,13 @@ class UserProfile extends React.Component {
                         className="avatar"
                         src={require('assets/img/headshot.jpg')}
                       />
-                      <h5 className="title">Prabhjot Singh Rai</h5>
+                      <h1 className="title">Prabhjot Singh Rai</h1>
                     </a>
                     <p className="description">
-                      Principal Engineer at{' '}
+                      CS Graduate Student at University of Minnesota
+                    </p>
+                    <p className="description">
+                      Former Principal Engineer at{' '}
                       <a href={'https://www.flyhomes.com'} target={'blank'}>
                         Flyhomes
                       </a>
@@ -90,20 +101,33 @@ class UserProfile extends React.Component {
                     <center>
                       A full-stack engineer with in-depth knowledge of
                       front-end, back-end and devops. Passionate about AI,
-                      robots, entrepreneurship and development. <br /> View my
-                      github projects{' '}
-                      <a
-                        onClick={() => this.onButtonClick('githubText')}
-                        href={''}
-                      >
-                        here
-                      </a>
-                      .
+                      robotics, entrepreneurship and development.
                     </center>
                   </div>
                 </CardBody>
                 <CardFooter>
                   <div className="button-container">
+                    <Button
+                      className="btn-icon btn-round"
+                      color="google"
+                      onClick={() => this.onButtonClick('linkedin')}
+                    >
+                      <i className="fab fa-linkedin" />
+                    </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="google"
+                      onClick={() => this.onButtonClick('github')}
+                    >
+                      <i className="fab fa-github" />
+                    </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="google"
+                      onClick={() => this.onButtonClick('stack-overflow')}
+                    >
+                      <i className="fab fa-stack-overflow" />
+                    </Button>
                     <Button
                       className="btn-icon btn-round"
                       color="facebook"
@@ -122,17 +146,16 @@ class UserProfile extends React.Component {
                     </Button>
                     <Button
                       className="btn-icon btn-round"
-                      color="google"
-                      onClick={() => this.onButtonClick('linkedin')}
+                      color="twitter"
+                      onClick={() => this.onButtonClick('instagram')}
                     >
-                      <i className="fab fa-linkedin" />
+                      <i className="fab fa-instagram" />
                     </Button>
                     <Button
-                      className="btn-icon btn-round"
                       color="google"
-                      onClick={() => this.onButtonClick('github')}
+                      onClick={() => this.onButtonClick('resume')}
                     >
-                      <i className="fab fa-github" />
+                      Resume
                     </Button>
                   </div>
                 </CardFooter>
